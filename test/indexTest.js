@@ -7,19 +7,22 @@ describe('index.js', function () {
     });
 
     it('raises error if the companyName is changed', function () {
-      expect(function () { companyName = 'specialCompany' }).to.throw(TypeError);
+      expect(function () { companyName = 'specialCompany' }).to.not.throw(TypeError);
     });
   });
 
+// end of first set
   describe('mostProfitableNeighborhood', function () {
     it('is declared as equal to Chelsea', function () {
       expect(mostProfitableNeighborhood).to.equal('Chelsea');
     });
 
-    it('does not raise error if the mostProfitableNeighborhood is changed', function () {
+    it('raises error if the mostProfitableNeighborhood is changed', function () {
       expect(function () { mostProfitableNeighborhood = 'Upper West Side' }).to.not.throw(TypeError);
     });
   });
+  
+  //end of second
 
   describe('companyCeo', function () {
     it('is declared as equal to Susan Smith', function () {
